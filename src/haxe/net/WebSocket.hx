@@ -20,6 +20,7 @@ class WebSocket {
                 return new node.WebSocket(url,protocols);
             #else
                 return new haxe.net.impl.WebSocketJs(url, protocols); 
+            #end
         #else
             #if flash
                 if (haxe.net.impl.WebSocketFlashExternalInterface.available()) {

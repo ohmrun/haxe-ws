@@ -1,6 +1,6 @@
 package node;
 
-@:require("ws") extern class WebSocket extends EventTarget {
+@:require("ws") extern class WebSocket extends js.html.EventTarget {
 	static inline var CONNECTING : Int = 0;
 	static inline var OPEN : Int = 1;
 	static inline var CLOSING : Int = 2;
