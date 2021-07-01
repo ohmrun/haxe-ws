@@ -19,7 +19,7 @@ class WebSocket {
             #if hxnodejs
                 return new node.WebSocket(url,protocols);
             #else
-                return new haxe.net.impl.WebSocketJs(url, protocols); 
+                return new haxe.net.impl.WebSocketJs(url, protocols);
             #end
         #else
             #if flash
