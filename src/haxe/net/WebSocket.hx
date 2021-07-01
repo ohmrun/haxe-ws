@@ -16,7 +16,10 @@ class WebSocket {
 
     dynamic static public function create(url:String, protocols:Array<String> = null, origin:String = null, debug:Bool = false):WebSocket {
         #if js
-        return new haxe.net.impl.WebSocketJs(url, protocols);
+            #if hxnodejs
+                return new node.WebSocket(url,protocols)
+            #else
+                return new haxe.net.impl.WebSocketJs(url, protocols); 
         #else
             #if flash
                 if (haxe.net.impl.WebSocketFlashExternalInterface.available()) {
